@@ -1,6 +1,6 @@
 package inheritance;
 
-public class Critter {
+abstract public class Critter {
 	private String color;
 	
 	Critter() {
@@ -9,7 +9,7 @@ public class Critter {
 	Critter(String color) {
 		this.color = color;
 	}
-	public String getColor() {
+	final public String getColor() {
 		return this.color;
 	}
 	
@@ -19,4 +19,11 @@ public class Critter {
 				&& c.getColor() == this.getColor();
 		
 	}
+	
+	// abstract methods must be in abstract class
+	
+	abstract public String myTitle();
+	abstract public String move();
+	
+	
 }
